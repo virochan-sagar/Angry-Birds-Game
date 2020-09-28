@@ -2,7 +2,7 @@ const Engine=Matter.Engine;
 const World=Matter.World;
 const Bodies=Matter.Bodies;
 
-var box1,box2,box3,box4,box5,ground1,pig1,pig2,log1,log2,log3,log4,bird1,back;
+var box1,box2,box3,box4,box5,ground1,pig1,pig2,log1,log2,log3,log4,bird1,back,plat;
 function preload (){
 back=loadImage("sprites/bg.png");
 }
@@ -30,6 +30,8 @@ function setup(){
     box5=new Box(810,120,70,70);
     
     bird1=new bird(50,50);
+
+    plat=new Ground(150,305,300,170);
 }
     
 
@@ -54,4 +56,6 @@ ground1.display();
  log4.display();
 
  bird1.display();
+
+ plat.display();
 }
